@@ -2,14 +2,14 @@
 
 A simple buy and sell for small business.
 
-# Todos
+## Todos
 
 - [ ] Setup bank accounts
 - [ ] Buy
 - [ ] Buy charts
 
 
-# Screenshots
+## Screenshots
 
 Settings
 
