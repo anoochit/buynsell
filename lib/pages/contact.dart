@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_slidable/flutter_slidable.dart';
 import 'package:fluttertoast/fluttertoast.dart';
 import 'package:raccount/models/contact.dart';
+import 'package:raccount/pages/add_contact.dart';
+import 'package:raccount/pages/edit_contact.dart';
 import 'package:raccount/service/database.dart';
 import 'package:raccount/styles/style.dart';
 import 'package:url_launcher/url_launcher.dart';
@@ -40,7 +42,19 @@ class _ContactPageState extends State<ContactPage> {
         actions: [
           IconButton(
             icon: Icon(Icons.add_circle),
-            onPressed: () {},
+            onPressed: () async {
+              final result = await Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (BuildContext context) {
+                    return AddContactPage();
+                  },
+                ),
+              );
+              if (result.toString() != null) {
+                setState(() {});
+              }
+            },
           ),
         ],
       ),
@@ -84,13 +98,26 @@ class _ContactPageState extends State<ContactPage> {
                             caption: 'Delete',
                             color: Colors.red,
                             icon: Icons.archive,
-                            onTap: () => Fluttertoast.showToast(msg: 'Delete'),
+                            onTap: () {
+                              Fluttertoast.showToast(msg: 'Deleted');
+                              racc.deteteContact(id: data[index].id);
+                              setState(() {});
+                            },
                           ),
                           IconSlideAction(
                             caption: 'Edit',
                             color: Colors.green,
                             icon: Icons.edit,
-                            onTap: () => Fluttertoast.showToast(msg: 'Edit'),
+                            onTap: () async {
+                              final result = await Navigator.push(context,
+                                  MaterialPageRoute(
+                                      builder: (BuildContext context) {
+                                return EditContactPage(contact: data[index]);
+                              }));
+                              if (result.toString() != null) {
+                                setState(() {});
+                              }
+                            },
                           ),
                         ],
                       );
