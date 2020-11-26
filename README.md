@@ -4,7 +4,13 @@ A simple buy and sell for small business.
 
 ## Todos
 
-- [ ] Setup bank accounts
+- [ ] Dashboard
+- [X] Business Info 
+- [ ] Contact 
+- [X] Product 
+- [ ] Bank accounts
+- [ ] Sell
+- [ ] Sell charts
 - [ ] Buy
 - [ ] Buy charts
 
