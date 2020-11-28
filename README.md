@@ -10,6 +10,9 @@ A simple buy and sell for small business.
 - [X] Product 
 - [ ] Bank accounts
 - [ ] Sell
+- [ ] Quotation
+- [ ] Billing Note/Invoice
+- [ ] Quotation
 - [ ] Sell charts
 - [ ] Buy
 - [ ] Buy charts

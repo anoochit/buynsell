@@ -51,26 +51,7 @@ class RaccService {
 
     Box<Contact> box = await Hive.openBox<Contact>('contact');
 
-    // if (box.length == 0) {
-    //   log('-> no data add sample data');
-    //   box.put(
-    //     '0',
-    //     Contact(
-    //       id: '0',
-    //       name: 'Mr. Sample',
-    //       position: 'Sale Representative',
-    //       company: 'Sample Company',
-    //       address1: '1600 Amphitheatre Parkway',
-    //       address2: 'Mountain View, CA 94043',
-    //       phone: '1-877-355-5787',
-    //       email: 'info@sample.co',
-    //     ),
-    //   );
-    //   return box.values;
-    // } else {
-    //   log('-> has data key 0 = ' + box.get('0').name);
     return box.values;
-    // }
   }
 
   Future<void> saveContact(Contact contact) async {
@@ -135,23 +116,7 @@ class RaccService {
 
     Box<Product> box = await Hive.openBox<Product>('product');
 
-    // if (box.length == 0) {
-    //   log('-> no data add sample data');
-    //   box.put(
-    //     '1',
-    //     Product(
-    //       id: '1',
-    //       name: 'Sample product',
-    //       description: 'Sample product description',
-    //       unit: 'unit',
-    //       price: 10,
-    //       type: 'service',
-    //     ),
-    //   );
-    //   return box.values;
-    // } else {
     return box.values;
-    //}
   }
 
   Future<void> saveProduct(Product product) async {

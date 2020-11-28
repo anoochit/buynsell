@@ -57,7 +57,7 @@ class _EditContactPageState extends State<EditContactPage> {
                       id: contact.id,
                       name: textNameController.text,
                       position: textPositionController.text,
-                      company: textNameController.text,
+                      company: textCompanyController.text,
                       address1: textAddress1Controller.text,
                       address2: textAddress2Controller.text,
                       phone: textPhoneController.text,

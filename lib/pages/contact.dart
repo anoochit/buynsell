@@ -4,6 +4,7 @@ import 'package:fluttertoast/fluttertoast.dart';
 import 'package:raccount/models/contact.dart';
 import 'package:raccount/pages/add_contact.dart';
 import 'package:raccount/pages/edit_contact.dart';
+import 'package:raccount/pages/view_contact.dart';
 import 'package:raccount/service/database.dart';
 import 'package:raccount/styles/style.dart';
 import 'package:url_launcher/url_launcher.dart';
@@ -92,6 +93,12 @@ class _ContactPageState extends State<ContactPage> {
                               onPressed: () {
                                 launchCall(data[index].phone);
                               }),
+                          onTap: () {
+                            Navigator.push(context, MaterialPageRoute(
+                                builder: (BuildContext context) {
+                              return ViewContactPage(contact: data[index]);
+                            }));
+                          },
                         ),
                         secondaryActions: <Widget>[
                           IconSlideAction(

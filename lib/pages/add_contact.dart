@@ -44,7 +44,7 @@ class _AddContactPageState extends State<AddContactPage> {
                         id: null,
                         name: textNameController.text,
                         position: textPositionController.text,
-                        company: textNameController.text,
+                        company: textCompanyController.text,
                         address1: textAddress1Controller.text,
                         address2: textAddress2Controller.text,
                         phone: textPhoneController.text,
